@@ -1,0 +1,214 @@
+body {
+  background-color: #ffffff;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.main-container {
+  width: 1000px;
+  margin: auto;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.header {
+  box-shadow: 0 4px 2px -2px gray;
+  margin: 10px 0;
+}
+
+.company-logo,
+.search-form {
+  width: 49%;
+}
+
+.company-logo > img {
+  width: 200px;
+}
+
+.search-form {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.search-form .visually-hidden {
+  display: none;
+}
+
+.search-form input {
+  position: relative;
+  width: 320px;
+  height: 40px;
+  border: 2px solid gray;
+  border-radius: 50px;
+  padding-left: 45px;
+  padding-right: 11px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 18px;
+}
+
+.search-form input:focus {
+  outline: none;
+}
+
+.search-form input:focus::placeholder {
+  color: transparent;
+}
+
+.search-form .search-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: 2px solid gray;
+  margin-left: 10px;
+  margin-top: 7px;
+  border-radius: 100%;
+  z-index: 100;
+}
+
+.search-form .search-icon::after {
+  content: "";
+  position: absolute;
+  background: green;
+  height: 6px;
+  width: 3px;
+  bottom: -5px;
+  right: -3px;
+  transform: rotate(-45deg);
+}
+
+.artist-details {
+  margin: 15px 0;
+}
+
+.artist-details img,
+.album-item img {
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 50%);
+  display: flex;
+  margin: 0 auto 1px;
+  width: auto;
+  height: inherit;
+}
+
+.artist-promo,
+.artist-info {
+  width: 49%;
+  height: 400px;
+}
+
+.artist-promo img {
+  margin-left: 20px;
+}
+
+.artist-name h2 {
+  font-size: 30px;
+}
+
+.artist-story {
+  width: 85%;
+  text-align: justify;
+}
+
+.container-title {
+  width: 100%;
+  margin-left: 20px;
+}
+
+.album-item {
+  float: left;
+  width: calc(100% / 5 - 30px);
+  margin: 15px;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+.album-info {
+  margin-left: 5px;
+}
+
+.album-info p {
+  margin: 5px 0;
+}
+
+.album-title {
+  font-weight: bold;
+}
+
+.album-year {
+  color: gray;
+}
+
+.placeholder {
+  display: none;
+  width: 0%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .main-container {
+    width: 940px;
+  }
+
+  .album-item {
+    width: calc(100% / 4 - 30px);
+  }
+
+  .placeholder {
+    display: block;
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .main-container {
+    width: 680px;
+  }
+
+  .company-logo,
+  .search-form {
+    width: 100%;
+    text-align: center;
+  }
+
+  .artist-promo,
+  .artist-info {
+    width: 100%;
+    height: 450px;
+  }
+
+  .artist-promo img {
+    margin-left: auto;
+  }
+
+  .artist-info {
+    height: auto;
+    margin-left: 25px;
+  }
+
+  .artist-story {
+    width: 95%;
+  }
+
+  .album-item {
+    width: calc(100% / 3 - 50px);
+  }
+
+  .placeholder {
+    display: block;
+    width: 66%;
+  }
+}
